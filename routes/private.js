@@ -8,13 +8,12 @@ const {
   userdata,
 } = require("../controllers/private");
 const {
-  refreshToken,
   verifyuser,
   logout
 } = require("../middleware/verifyuser");
 
 
-router.post('/refresh', refreshToken);
+
 router.post('/logout', logout);
 router.post("/resetpass",verifyuser, resetpassword);
 router.post('/income',verifyuser, income);
