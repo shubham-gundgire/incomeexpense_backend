@@ -9,7 +9,7 @@ const contact = async (req, res) => {
            return data;
          })
          .catch((e) => {
-           res.status(403).json({
+           return res.status(403).json({
              msg: "please try again",
              code: "100",
              e
