@@ -55,21 +55,21 @@ const refesharray = await Refesh.create({ refreshtoken: refreshToken });
       .status(200)
       .cookie("accessToken", accessToken, {
         expires: new Date(new Date().getTime() + 5 * 60000),
-        
+        sameSite: "none",
         httpOnly: true,
       })
       .cookie("refreshToken", refreshToken, {
         expires: new Date(new Date().getTime() + 240 * 60 * 60000),
-       
+        sameSite: "none",
         httpOnly: true,
       })
       .cookie("authSession", true, {
         expires: new Date(new Date().getTime() + 5 * 60000),
-       
+        sameSite: "none",
       })
       .cookie("refreshTokenID", true, {
         expires: new Date(new Date().getTime() + 240 * 60 * 60000),
-        
+        sameSite: "none",
       })
       .json({ mag: "user register sucesfully", code: 201 });
   } catch (error) {
@@ -123,22 +123,21 @@ const refesharray = await Refesh.create({ refreshtoken: refreshToken });
       .status(200)
       .cookie("accessToken", accessToken, {
         expires: new Date(new Date().getTime() + 5 * 60000),
-        
+        sameSite: "none",
         httpOnly: true,
-        
       })
       .cookie("refreshToken", refreshToken, {
         expires: new Date(new Date().getTime() + 240 * 60 * 60000),
-        
+        sameSite: "none",
         httpOnly: true,
       })
       .cookie("authSession", true, {
         expires: new Date(new Date().getTime() + 5 * 60000),
-        
+        sameSite: "none",
       })
       .cookie("refreshTokenID", true, {
         expires: new Date(new Date().getTime() + 240 * 60 * 60000),
-        
+        sameSite: "none",
       })
       .json({ mag: "user login sucesfully", code: 201 });
   } catch (error) {

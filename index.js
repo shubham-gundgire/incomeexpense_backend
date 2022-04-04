@@ -9,7 +9,8 @@ const auth = require('./routes/user');
 const public = require('./routes/public')
 const private = require('./routes/private');
 connect();
-app.use(cors({ origin:'http://localhost:3000',credentials: true }));
+app.set("trust proxy", 1);
+app.use(cors({credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/auth', auth);
