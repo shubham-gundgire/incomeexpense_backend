@@ -10,7 +10,7 @@ const public = require('./routes/public')
 const private = require('./routes/private');
 connect();
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/auth', auth);
