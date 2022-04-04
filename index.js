@@ -10,7 +10,7 @@ const public = require('./routes/public')
 const private = require('./routes/private');
 connect();
 app.set("trust proxy", 1);
-app.use(cors({credentials: true }));
+app.use(cors({origin:'*',credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/auth', auth);
