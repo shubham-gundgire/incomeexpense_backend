@@ -1,0 +1,20 @@
+{
+  "name": "incomeexpense-backend-tests",
+  "private": true,
+  "description": "Test tooling for the income/expense API. Kept apart from the app's package.json.",
+  "scripts": {
+    "test": "cd .. && tests/node_modules/.bin/jest -c tests/jest.config.js",
+    "coverage": "cd .. && tests/node_modules/.bin/jest -c tests/jest.config.js --coverage",
+    "bugs": "cd .. && SHOW_BUGS=1 tests/node_modules/.bin/jest -c tests/jest.config.js"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "6.0.19"
+    }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.4.3",
+    "supertest": "^7.3.1"
+  }
+}
